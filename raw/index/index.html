@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> Real Time Laundry </title>
+<link rel="icon" href= {{ url_for('static', filename='img/icon.png') }} >
+<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/theme.css') }} ">
+
+<!-- timer -->
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+
+</head>
+<body onload="startTime()">
+
+<ul>
+  <li><a href="/index">Home</a></li>
+  <li><a href="/news">News</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+<div class="first"> </div>
+
+<center> <h1 id="firstHeader"> <img id="icon" src= "{{ url_for('static', filename='img/icon.png') }} ">  Real Time Laundry  </h1> </center>
+<hr>
+
+<h2 id="main"> <center> Right now, out of {{ laundry_count }} washing machine(s) </center> </h2>
+
+<br><br><br><br><br><br><br><br>
+
+<center> <p id="status"> </p> </center>
+
+<script>
+var count = '{{ laundry_count }}';
+var left = '{{ left_stat }}';
+var right = '{{ right_stat }}';
+
+var img;
+
+if (count == "1") {
+	if (left == "1") {
+		img = "<img id=\"laund\" src= \"{{ url_for('static', filename='img/icon.png') }} \"> <br> <img id=\"on\" src= \"{{ url_for('static', filename='img/on.png') }} \">";
+	} else {
+		img = "<img id=\"laund\" src= \"{{ url_for('static', filename='img/icon.png') }} \"> <br> <img id=\"off\" src= \"{{ url_for('static', filename='img/off.png') }} \">";
+	}
+}
+
+if (count == "2") {
+	if (left == "0" && right == "1") {	
+		img = "<img id=\"laund\" src= \"{{ url_for('static', filename='img/icon.png') }} \"> &nbsp; <img id=\"laund\" src= \"{{ url_for('static', filename='img/icon.png') }} \"> <br> <img id=\"off\" src= \"{{ url_for('static', filename='img/off.png') }} \"> &nbsp; &nbsp; &nbsp; <img id=\"on\" src= \"{{ url_for('static', filename='img/on.png') }} \">";	
+	} else if (left == "1" && right == "0") {
+		img = "<img id=\"laund\" src= \"{{ url_for('static', filename='img/icon.png') }} \"> &nbsp; <img id=\"laund\" src= \"{{ url_for('static', filename='img/icon.png') }} \"> <br> <img id=\"on\" src= \"{{ url_for('static', filename='img/on.png') }} \"> &nbsp; &nbsp; &nbsp; <img id=\"off\" src= \"{{ url_for('static', filename='img/off.png') }} \">";	
+	} else if (left == "1" && right == "1") {
+		img = "<img id=\"laund\" src= \"{{ url_for('static', filename='img/icon.png') }} \"> &nbsp; <img id=\"laund\" src= \"{{ url_for('static', filename='img/icon.png') }} \"> <br> <img id=\"on\" src= \"{{ url_for('static', filename='img/on.png') }} \"> &nbsp; &nbsp; &nbsp; <img id=\"on\" src= \"{{ url_for('static', filename='img/on.png') }} \">";	
+	} else {
+		img = "<img id=\"laund\" src= \"{{ url_for('static', filename='img/icon.png') }} \"> &nbsp; <img id=\"laund\" src= \"{{ url_for('static', filename='img/icon.png') }} \"> <br> <img id=\"off\" src= \"{{ url_for('static', filename='img/off.png') }} \"> &nbsp; &nbsp; &nbsp; <img id=\"off\" src= \"{{ url_for('static', filename='img/off.png') }} \">";	
+	}
+}
+
+document.getElementById('status').innerHTML = img;
+
+
+</script>
+
+
+
+
+<br><br><br><br><br><br><br><br>
+
+<h2 id="main"> <center> {{ num }} laundry machine(s) is/are available </center> </h2>
+
+
+<div align="center"> <h2 style="font-size:125%"> Time: <span align="center" id="txt"> </span> </h2> </div>
+
+<br>
+<center>
+<form method="get" action="/index">
+    <button type="submit"> Refresh </button>
+</form>
+</center>
+<br>
+
+<hr>
+<p id="end"> <span id="blue"> &lt;EE474 Introduction to Multimedia&gt; </span> <br> <br> <span style="font-weight:bold"> Project Name</span>: Real Time Laundry <br> <span style="font-weight:bold">Project description</span>: Real Time Laundry saves precious time of people by providing 
+the information about washing machine availability to users before they head to the laundry place <br> <span id="blue"> <br> &lt;Group 1&gt; </span> <br> JeongYeul Cho  Jaun Yang  Kijung Ryu  Wootae Song </p>
+
+<br> <br>
+
+<img id="kaist" src= "{{ url_for('static', filename='img/kaist.png') }}">
+
+
+
+	
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<title> About - Real Time Laundry </title>
+<link rel="icon" href= {{ url_for('static', filename='img/icon.png') }} >
+<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/theme.css') }} ">
+
+</head>
+
+<ul>
+  <li><a href="/index">Home</a></li>
+  <li><a href="/news">News</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+<body>
+<div class="first"> 
+</div>
+
+<center> <h1 id="firstHeader"> <img id="icon" src= "{{ url_for('static', filename='img/icon.png') }} ">  Real Time Laundry  </h1> </center>
+<hr>
+
+<h1 = id="about"> Group 1 Members </h1>
+
+<div>
+<img id = "profile" src= "{{ url_for('static', filename='img/profile.png') }}">
+
+<p> <br><br><br><br> Name: JeongYeul Cho <br> Role: Presenter, Designer <br> </p>
+</div>
+
+<div>
+<img id = "profile" src= "{{ url_for('static', filename='img/profile.png') }}">
+
+<p> <br><br><br><br> Name: Jaun Yang <br> Role: Report, Powerpoint <br> </p>
+</div>
+
+<div>
+ <img id = "profile" src= "{{ url_for('static', filename='img/profile.png') }}">
+
+<p> <br><br><br><br> Name: Kijung Ryu <br> Role: Image processing <br> </p>
+</div>
+
+<div>
+<p> <img id = "profile" src= "{{ url_for('static', filename='img/profile.png') }} ">
+
+<p> <br><br><br><br> Name: Wootae Song <br> Role: Server, Image processing, Webpage coding <br> </p>
+</div>
+
+</body>
+
+<hr>
+<p id="end"> <span id="blue"> &lt;EE474 Introduction to Multimedia&gt; </span> <br> <br> <span style="font-weight:bold"> Project Name</span>: Real Time Laundry <br> <span style="font-weight:bold">Project description</span>: Real Time Laundry saves precious time of people by providing 
+the information about washing machine availability to users before they head to the laundry place <br> <span id="blue"> <br> &lt;Group 1&gt; </span> <br> JeongYeul Cho  Jaun Yang  Kijung Ryu  Wootae Song </p>
+
+<br> <br>
+
+<img id="kaist" src= "{{ url_for('static', filename='img/kaist.png') }}">
+
+
+</html>
