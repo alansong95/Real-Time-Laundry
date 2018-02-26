@@ -6,7 +6,7 @@ Real Time Laundry is a system that notifies the availability of laundry machines
 By having Real Time Laundry, people can monitor the availability of laundry machines and plan their trip efficiently to a public laundry room, saving their time and labor.
 
 ### How it works
-![process](https://drive.google.com/file/d/1KTKoD1fp3W-kx79xo6hIREdz4HP53Q9U/view?usp=sharing)
+![process](images/rtl_processpng)
 
 Real Time Laundry consists of a camera and a server.
 
@@ -16,9 +16,9 @@ The server receives the images and determines how many laundry machines are avai
 
 The server then posts the information on Real Time Laundry website.
 
-![process2](https://drive.google.com/file/d/19_HTx6X-Lidn0nIuNd47UYO-_FR5sNHG/view?usp=sharing)
+![process2](images/rtl_process2.png)
 
-![website](https://drive.google.com/file/d/1xq7FuI5TznhO_JiT7bg8JVlO26vI9JMD/view?usp=sharing)
+![website](images/rtl_website.bmp)
 
 ### Used
 * MATLAB
@@ -33,7 +33,10 @@ The server then posts the information on Real Time Laundry website.
 * Socket Programming
 
 ### Link
-[link](https://google.com/)
+[link](https://awsong.000webhostapp.com/project/real_time_laundry.html)
 
 \<KAIST EE474 Introduction to Multimedia>
+
+\<Spring 2016>
+
 \<Coded by Alan Wootae Song>
