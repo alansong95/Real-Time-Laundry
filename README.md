@@ -25,7 +25,9 @@ The server then posts the information on Real Time Laundry website.
 * C
 * HTML
 * CSS
+* ASP
 * JavaScript
+* Python
 * Flask
 * Linux
 * Socket Programming
@@ -33,6 +35,5 @@ The server then posts the information on Real Time Laundry website.
 ### Link
 [link](https://google.com/)
 
-
-<KAIST EE474 Introduction to Multimedia>
-<Coded by Alan Wootae Song>
+\<KAIST EE474 Introduction to Multimedia>
+\<Coded by Alan Wootae Song>
