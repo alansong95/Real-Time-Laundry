@@ -1,4 +1,5 @@
 # Real Time Laundry
+[For more information](https://awsong.000webhostapp.com/project/real_time_laundry.html)
 
 ### What is Real Time Laundry?
 Real Time Laundry is a system that notifies the availability of laundry machines in a public laundry room.
@@ -35,6 +36,8 @@ The server then posts the information on Real Time Laundry website.
 
 ### Link
 [For more information](https://awsong.000webhostapp.com/project/real_time_laundry.html)
+
+<br />
 
 \<KAIST EE474 Introduction to Multimedia>
 
