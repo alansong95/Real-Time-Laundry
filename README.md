@@ -37,5 +37,7 @@ The server then posts the information on Real Time Laundry website.
 [For more information](https://awsong.000webhostapp.com/project/real_time_laundry.html)
 
 \<KAIST EE474 Introduction to Multimedia>
+
 \<Spring 2016>
+
 \<Coded by Alan Wootae Song>
